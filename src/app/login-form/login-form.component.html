@@ -1,0 +1,15 @@
+<h1>Login Page</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+    <div>
+        <label>Email:</label>
+        <input type="email" formControlName="email">
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" formControlName="password">
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+    <p>If you are a new user,<a routerLink="/signup" routerLinkActive="active"> Click Signup!</a></p>
+</form>

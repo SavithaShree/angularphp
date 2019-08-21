@@ -1,0 +1,39 @@
+<h1>Registration Form</h1>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+    <div>
+        <label>Username:</label>
+        <input type="text" formControlName="name">
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" formControlName="password">
+    </div>
+    <div>
+        <label>Date of Birth:</label>
+        <input type="date" formControlName="dob">
+    </div>
+    <div>
+        <label>Gender: </label>
+        <div>
+            <label>
+                <input type="radio" value="f" formControlName="gender">
+                Female
+            </label>
+            <label>
+                <input type="radio" value="m" formControlName="gender">
+                Male
+            </label>
+        </div>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" formControlName="email">
+    </div>
+    <div>
+        <label>Mobile Number</label>
+        <input type="text" formControlName="mobilenumber">
+    </div>
+    <div>
+        <button type="submit">Register Now</button>
+    </div>
+</form>
